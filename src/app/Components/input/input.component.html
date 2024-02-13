@@ -1,0 +1,17 @@
+<h1>Velkommen til den meget smukke Geometri</h1>
+<h4>Indtast længten på side A</h4>
+
+<input type="number" name="inputA" [(ngModel)]="inputValueA" placeholder="Side A">
+
+<h4>Indtast længten på side B</h4>
+
+<input type="number" name="inputB" [(ngModel)]="inputValueB" placeholder="Side B"> 
+<br>
+<button type="button" (click)="calculate()">Beregn</button>
+<br>
+<div *ngIf="inputValueA == inputValueB && inputValueA != 0 && areaValue != undefined ">
+    <p >Den intastede form er en kvadrat med et arial på {{areaValue}} og en omkreds på {{perimeterValue}}</p> 
+</div>
+<div *ngIf="inputValueA != inputValueB && inputValueA != 0 && areaValue != undefined ">
+    <p >Den intastede form er en rettangel med et arial på {{areaValue}} og en omkreds på {{perimeterValue}}</p>
+</div>
